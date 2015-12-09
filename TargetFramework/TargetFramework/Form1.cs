@@ -16,5 +16,15 @@ namespace TargetFramework
         {
             InitializeComponent();
         }
+
+        private void addTargetArrayToSequenceBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addDelayToSequenceBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
