@@ -1,7 +1,7 @@
 # TargetFramework
 Application used to control automated targets.
 
-Download link: (TargetFramework.zip)
+Download link: [here](TargetFramework.zip)
 
 Notes:
 Requires .NET 4.5.
