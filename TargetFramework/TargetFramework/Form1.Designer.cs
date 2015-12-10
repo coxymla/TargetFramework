@@ -31,41 +31,43 @@
             this.t1_s_btn = new System.Windows.Forms.Button();
             this.t1_ns_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.t1_txt = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.t2_txt = new System.Windows.Forms.TextBox();
             this.t2_s_btn = new System.Windows.Forms.Button();
             this.t2_ns_btn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.t3_txt = new System.Windows.Forms.TextBox();
+            this.t3_s_btn = new System.Windows.Forms.Button();
+            this.t3_ns_btn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.t4_txt = new System.Windows.Forms.TextBox();
+            this.t4_s_btn = new System.Windows.Forms.Button();
+            this.t4_ns_btn = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.t5_txt = new System.Windows.Forms.TextBox();
+            this.t5_s_btn = new System.Windows.Forms.Button();
+            this.t5_ns_btn = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.t6_txt = new System.Windows.Forms.TextBox();
+            this.t6_s_btn = new System.Windows.Forms.Button();
+            this.t6_ns_btn = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.t7_txt = new System.Windows.Forms.TextBox();
+            this.t7_s_btn = new System.Windows.Forms.Button();
+            this.t7_ns_btn = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.t1_txt = new System.Windows.Forms.TextBox();
-            this.t2_txt = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.t8_txt = new System.Windows.Forms.TextBox();
+            this.t8_s_btn = new System.Windows.Forms.Button();
+            this.t8_ns_btn = new System.Windows.Forms.Button();
             this.addTargetArrayToSequenceBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.delay = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.addDelayToSequenceBtn = new System.Windows.Forms.Button();
+            this.runSequence = new System.Windows.Forms.Button();
+            this.clearSequence = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -85,6 +87,7 @@
             this.t1_s_btn.TabIndex = 0;
             this.t1_s_btn.Text = "S";
             this.t1_s_btn.UseVisualStyleBackColor = true;
+            this.t1_s_btn.Click += new System.EventHandler(this.t1_s_btn_Click);
             // 
             // t1_ns_btn
             // 
@@ -95,6 +98,7 @@
             this.t1_ns_btn.TabIndex = 1;
             this.t1_ns_btn.Text = "NS";
             this.t1_ns_btn.UseVisualStyleBackColor = false;
+            this.t1_ns_btn.Click += new System.EventHandler(this.t1_ns_btn_Click);
             // 
             // groupBox1
             // 
@@ -108,223 +112,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "T1";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.t2_txt);
-            this.groupBox2.Controls.Add(this.t2_s_btn);
-            this.groupBox2.Controls.Add(this.t2_ns_btn);
-            this.groupBox2.Location = new System.Drawing.Point(128, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(110, 91);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "T2";
-            // 
-            // t2_s_btn
-            // 
-            this.t2_s_btn.Location = new System.Drawing.Point(6, 19);
-            this.t2_s_btn.Name = "t2_s_btn";
-            this.t2_s_btn.Size = new System.Drawing.Size(46, 46);
-            this.t2_s_btn.TabIndex = 0;
-            this.t2_s_btn.Text = "S";
-            this.t2_s_btn.UseVisualStyleBackColor = true;
-            // 
-            // t2_ns_btn
-            // 
-            this.t2_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.t2_ns_btn.Location = new System.Drawing.Point(58, 19);
-            this.t2_ns_btn.Name = "t2_ns_btn";
-            this.t2_ns_btn.Size = new System.Drawing.Size(46, 46);
-            this.t2_ns_btn.TabIndex = 1;
-            this.t2_ns_btn.Text = "NS";
-            this.t2_ns_btn.UseVisualStyleBackColor = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Location = new System.Drawing.Point(244, 12);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(110, 91);
-            this.groupBox3.TabIndex = 3;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "T3";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(6, 19);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(46, 46);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "S";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(58, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(46, 46);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "NS";
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.button8);
-            this.groupBox4.Location = new System.Drawing.Point(360, 12);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(110, 91);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "T4";
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(6, 19);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(46, 46);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "S";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button8.Location = new System.Drawing.Point(58, 19);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(46, 46);
-            this.button8.TabIndex = 1;
-            this.button8.Text = "NS";
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.button9);
-            this.groupBox5.Controls.Add(this.button10);
-            this.groupBox5.Location = new System.Drawing.Point(476, 12);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(110, 91);
-            this.groupBox5.TabIndex = 4;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "T5";
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(6, 19);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(46, 46);
-            this.button9.TabIndex = 0;
-            this.button9.Text = "S";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Location = new System.Drawing.Point(58, 19);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(46, 46);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "NS";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.textBox6);
-            this.groupBox6.Controls.Add(this.button11);
-            this.groupBox6.Controls.Add(this.button12);
-            this.groupBox6.Location = new System.Drawing.Point(592, 12);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(110, 91);
-            this.groupBox6.TabIndex = 4;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "T6";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(6, 19);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(46, 46);
-            this.button11.TabIndex = 0;
-            this.button11.Text = "S";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button12.Location = new System.Drawing.Point(58, 19);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(46, 46);
-            this.button12.TabIndex = 1;
-            this.button12.Text = "NS";
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.textBox7);
-            this.groupBox7.Controls.Add(this.button13);
-            this.groupBox7.Controls.Add(this.button14);
-            this.groupBox7.Location = new System.Drawing.Point(708, 12);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(110, 91);
-            this.groupBox7.TabIndex = 4;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "T7";
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(6, 19);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(46, 46);
-            this.button13.TabIndex = 0;
-            this.button13.Text = "S";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button14.Location = new System.Drawing.Point(58, 19);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(46, 46);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "NS";
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.textBox8);
-            this.groupBox8.Controls.Add(this.button15);
-            this.groupBox8.Controls.Add(this.button16);
-            this.groupBox8.Location = new System.Drawing.Point(824, 12);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(110, 91);
-            this.groupBox8.TabIndex = 4;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "T8";
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(6, 19);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(46, 46);
-            this.button15.TabIndex = 0;
-            this.button15.Text = "S";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button16.Location = new System.Drawing.Point(58, 19);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(46, 46);
-            this.button16.TabIndex = 1;
-            this.button16.Text = "NS";
-            this.button16.UseVisualStyleBackColor = false;
-            // 
             // t1_txt
             // 
             this.t1_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -336,6 +123,18 @@
             this.t1_txt.TabIndex = 5;
             this.t1_txt.Text = "NS";
             this.t1_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.t2_txt);
+            this.groupBox2.Controls.Add(this.t2_s_btn);
+            this.groupBox2.Controls.Add(this.t2_ns_btn);
+            this.groupBox2.Location = new System.Drawing.Point(128, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(110, 91);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "T2";
             // 
             // t2_txt
             // 
@@ -349,77 +148,296 @@
             this.t2_txt.Text = "NS";
             this.t2_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // t2_s_btn
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(6, 71);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(98, 13);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.Text = "NS";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.t2_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t2_s_btn.Name = "t2_s_btn";
+            this.t2_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t2_s_btn.TabIndex = 0;
+            this.t2_s_btn.Text = "S";
+            this.t2_s_btn.UseVisualStyleBackColor = true;
+            this.t2_s_btn.Click += new System.EventHandler(this.t2_s_btn_Click);
             // 
-            // textBox4
+            // t2_ns_btn
             // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(6, 71);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(98, 13);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "NS";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.t2_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t2_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t2_ns_btn.Name = "t2_ns_btn";
+            this.t2_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t2_ns_btn.TabIndex = 1;
+            this.t2_ns_btn.Text = "NS";
+            this.t2_ns_btn.UseVisualStyleBackColor = false;
+            this.t2_ns_btn.Click += new System.EventHandler(this.t2_ns_btn_Click);
             // 
-            // textBox5
+            // groupBox3
             // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(6, 71);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(98, 13);
-            this.textBox5.TabIndex = 9;
-            this.textBox5.Text = "NS";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.groupBox3.Controls.Add(this.t3_txt);
+            this.groupBox3.Controls.Add(this.t3_s_btn);
+            this.groupBox3.Controls.Add(this.t3_ns_btn);
+            this.groupBox3.Location = new System.Drawing.Point(244, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(110, 91);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "T3";
             // 
-            // textBox6
+            // t3_txt
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(6, 71);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(98, 13);
-            this.textBox6.TabIndex = 10;
-            this.textBox6.Text = "NS";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.t3_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t3_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t3_txt.Location = new System.Drawing.Point(6, 71);
+            this.t3_txt.Name = "t3_txt";
+            this.t3_txt.ReadOnly = true;
+            this.t3_txt.Size = new System.Drawing.Size(98, 13);
+            this.t3_txt.TabIndex = 7;
+            this.t3_txt.Text = "NS";
+            this.t3_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox7
+            // t3_s_btn
             // 
-            this.textBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(6, 71);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(98, 13);
-            this.textBox7.TabIndex = 11;
-            this.textBox7.Text = "NS";
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.t3_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t3_s_btn.Name = "t3_s_btn";
+            this.t3_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t3_s_btn.TabIndex = 0;
+            this.t3_s_btn.Text = "S";
+            this.t3_s_btn.UseVisualStyleBackColor = true;
+            this.t3_s_btn.Click += new System.EventHandler(this.t3_s_btn_Click);
             // 
-            // textBox8
+            // t3_ns_btn
             // 
-            this.textBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Location = new System.Drawing.Point(6, 71);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(98, 13);
-            this.textBox8.TabIndex = 12;
-            this.textBox8.Text = "NS";
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.t3_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t3_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t3_ns_btn.Name = "t3_ns_btn";
+            this.t3_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t3_ns_btn.TabIndex = 1;
+            this.t3_ns_btn.Text = "NS";
+            this.t3_ns_btn.UseVisualStyleBackColor = false;
+            this.t3_ns_btn.Click += new System.EventHandler(this.t3_ns_btn_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.t4_txt);
+            this.groupBox4.Controls.Add(this.t4_s_btn);
+            this.groupBox4.Controls.Add(this.t4_ns_btn);
+            this.groupBox4.Location = new System.Drawing.Point(360, 12);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(110, 91);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "T4";
+            // 
+            // t4_txt
+            // 
+            this.t4_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t4_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t4_txt.Location = new System.Drawing.Point(6, 71);
+            this.t4_txt.Name = "t4_txt";
+            this.t4_txt.ReadOnly = true;
+            this.t4_txt.Size = new System.Drawing.Size(98, 13);
+            this.t4_txt.TabIndex = 8;
+            this.t4_txt.Text = "NS";
+            this.t4_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // t4_s_btn
+            // 
+            this.t4_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t4_s_btn.Name = "t4_s_btn";
+            this.t4_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t4_s_btn.TabIndex = 0;
+            this.t4_s_btn.Text = "S";
+            this.t4_s_btn.UseVisualStyleBackColor = true;
+            this.t4_s_btn.Click += new System.EventHandler(this.t4_s_btn_Click);
+            // 
+            // t4_ns_btn
+            // 
+            this.t4_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t4_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t4_ns_btn.Name = "t4_ns_btn";
+            this.t4_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t4_ns_btn.TabIndex = 1;
+            this.t4_ns_btn.Text = "NS";
+            this.t4_ns_btn.UseVisualStyleBackColor = false;
+            this.t4_ns_btn.Click += new System.EventHandler(this.t4_ns_btn_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.t5_txt);
+            this.groupBox5.Controls.Add(this.t5_s_btn);
+            this.groupBox5.Controls.Add(this.t5_ns_btn);
+            this.groupBox5.Location = new System.Drawing.Point(476, 12);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(110, 91);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "T5";
+            // 
+            // t5_txt
+            // 
+            this.t5_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t5_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t5_txt.Location = new System.Drawing.Point(6, 71);
+            this.t5_txt.Name = "t5_txt";
+            this.t5_txt.ReadOnly = true;
+            this.t5_txt.Size = new System.Drawing.Size(98, 13);
+            this.t5_txt.TabIndex = 9;
+            this.t5_txt.Text = "NS";
+            this.t5_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // t5_s_btn
+            // 
+            this.t5_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t5_s_btn.Name = "t5_s_btn";
+            this.t5_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t5_s_btn.TabIndex = 0;
+            this.t5_s_btn.Text = "S";
+            this.t5_s_btn.UseVisualStyleBackColor = true;
+            this.t5_s_btn.Click += new System.EventHandler(this.t5_s_btn_Click);
+            // 
+            // t5_ns_btn
+            // 
+            this.t5_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t5_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t5_ns_btn.Name = "t5_ns_btn";
+            this.t5_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t5_ns_btn.TabIndex = 1;
+            this.t5_ns_btn.Text = "NS";
+            this.t5_ns_btn.UseVisualStyleBackColor = false;
+            this.t5_ns_btn.Click += new System.EventHandler(this.t5_ns_btn_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.t6_txt);
+            this.groupBox6.Controls.Add(this.t6_s_btn);
+            this.groupBox6.Controls.Add(this.t6_ns_btn);
+            this.groupBox6.Location = new System.Drawing.Point(592, 12);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(110, 91);
+            this.groupBox6.TabIndex = 4;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "T6";
+            // 
+            // t6_txt
+            // 
+            this.t6_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t6_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t6_txt.Location = new System.Drawing.Point(6, 71);
+            this.t6_txt.Name = "t6_txt";
+            this.t6_txt.ReadOnly = true;
+            this.t6_txt.Size = new System.Drawing.Size(98, 13);
+            this.t6_txt.TabIndex = 10;
+            this.t6_txt.Text = "NS";
+            this.t6_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // t6_s_btn
+            // 
+            this.t6_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t6_s_btn.Name = "t6_s_btn";
+            this.t6_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t6_s_btn.TabIndex = 0;
+            this.t6_s_btn.Text = "S";
+            this.t6_s_btn.UseVisualStyleBackColor = true;
+            this.t6_s_btn.Click += new System.EventHandler(this.t6_s_btn_Click);
+            // 
+            // t6_ns_btn
+            // 
+            this.t6_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t6_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t6_ns_btn.Name = "t6_ns_btn";
+            this.t6_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t6_ns_btn.TabIndex = 1;
+            this.t6_ns_btn.Text = "NS";
+            this.t6_ns_btn.UseVisualStyleBackColor = false;
+            this.t6_ns_btn.Click += new System.EventHandler(this.t6_ns_btn_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.t7_txt);
+            this.groupBox7.Controls.Add(this.t7_s_btn);
+            this.groupBox7.Controls.Add(this.t7_ns_btn);
+            this.groupBox7.Location = new System.Drawing.Point(708, 12);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(110, 91);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "T7";
+            // 
+            // t7_txt
+            // 
+            this.t7_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t7_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t7_txt.Location = new System.Drawing.Point(6, 71);
+            this.t7_txt.Name = "t7_txt";
+            this.t7_txt.ReadOnly = true;
+            this.t7_txt.Size = new System.Drawing.Size(98, 13);
+            this.t7_txt.TabIndex = 11;
+            this.t7_txt.Text = "NS";
+            this.t7_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // t7_s_btn
+            // 
+            this.t7_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t7_s_btn.Name = "t7_s_btn";
+            this.t7_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t7_s_btn.TabIndex = 0;
+            this.t7_s_btn.Text = "S";
+            this.t7_s_btn.UseVisualStyleBackColor = true;
+            this.t7_s_btn.Click += new System.EventHandler(this.t7_s_btn_Click);
+            // 
+            // t7_ns_btn
+            // 
+            this.t7_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t7_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t7_ns_btn.Name = "t7_ns_btn";
+            this.t7_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t7_ns_btn.TabIndex = 1;
+            this.t7_ns_btn.Text = "NS";
+            this.t7_ns_btn.UseVisualStyleBackColor = false;
+            this.t7_ns_btn.Click += new System.EventHandler(this.t7_ns_btn_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.t8_txt);
+            this.groupBox8.Controls.Add(this.t8_s_btn);
+            this.groupBox8.Controls.Add(this.t8_ns_btn);
+            this.groupBox8.Location = new System.Drawing.Point(824, 12);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(110, 91);
+            this.groupBox8.TabIndex = 4;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "T8";
+            // 
+            // t8_txt
+            // 
+            this.t8_txt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t8_txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.t8_txt.Location = new System.Drawing.Point(6, 71);
+            this.t8_txt.Name = "t8_txt";
+            this.t8_txt.ReadOnly = true;
+            this.t8_txt.Size = new System.Drawing.Size(98, 13);
+            this.t8_txt.TabIndex = 12;
+            this.t8_txt.Text = "NS";
+            this.t8_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // t8_s_btn
+            // 
+            this.t8_s_btn.Location = new System.Drawing.Point(6, 19);
+            this.t8_s_btn.Name = "t8_s_btn";
+            this.t8_s_btn.Size = new System.Drawing.Size(46, 46);
+            this.t8_s_btn.TabIndex = 0;
+            this.t8_s_btn.Text = "S";
+            this.t8_s_btn.UseVisualStyleBackColor = true;
+            this.t8_s_btn.Click += new System.EventHandler(this.t8_s_btn_Click);
+            // 
+            // t8_ns_btn
+            // 
+            this.t8_ns_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.t8_ns_btn.Location = new System.Drawing.Point(58, 19);
+            this.t8_ns_btn.Name = "t8_ns_btn";
+            this.t8_ns_btn.Size = new System.Drawing.Size(46, 46);
+            this.t8_ns_btn.TabIndex = 1;
+            this.t8_ns_btn.Text = "NS";
+            this.t8_ns_btn.UseVisualStyleBackColor = false;
+            this.t8_ns_btn.Click += new System.EventHandler(this.t8_ns_btn_Click);
             // 
             // addTargetArrayToSequenceBtn
             // 
@@ -433,9 +451,12 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 138);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(759, 172);
             this.dataGridView1.TabIndex = 6;
             // 
@@ -448,12 +469,13 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Delay";
             // 
-            // textBox1
+            // delay
             // 
-            this.textBox1.Location = new System.Drawing.Point(777, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 20);
-            this.textBox1.TabIndex = 8;
+            this.delay.Location = new System.Drawing.Point(777, 154);
+            this.delay.Name = "delay";
+            this.delay.Size = new System.Drawing.Size(122, 20);
+            this.delay.TabIndex = 8;
+            this.delay.Text = "1";
             // 
             // label2
             // 
@@ -474,14 +496,36 @@
             this.addDelayToSequenceBtn.UseVisualStyleBackColor = true;
             this.addDelayToSequenceBtn.Click += new System.EventHandler(this.addDelayToSequenceBtn_Click);
             // 
+            // runSequence
+            // 
+            this.runSequence.Location = new System.Drawing.Point(777, 287);
+            this.runSequence.Name = "runSequence";
+            this.runSequence.Size = new System.Drawing.Size(157, 23);
+            this.runSequence.TabIndex = 11;
+            this.runSequence.Text = "Run Sequence";
+            this.runSequence.UseVisualStyleBackColor = true;
+            this.runSequence.Click += new System.EventHandler(this.runSequence_Click);
+            // 
+            // clearSequence
+            // 
+            this.clearSequence.Location = new System.Drawing.Point(777, 258);
+            this.clearSequence.Name = "clearSequence";
+            this.clearSequence.Size = new System.Drawing.Size(157, 23);
+            this.clearSequence.TabIndex = 12;
+            this.clearSequence.Text = "Clear Sequence";
+            this.clearSequence.UseVisualStyleBackColor = true;
+            this.clearSequence.Click += new System.EventHandler(this.clearSequence_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 322);
+            this.Controls.Add(this.clearSequence);
+            this.Controls.Add(this.runSequence);
             this.Controls.Add(this.addDelayToSequenceBtn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.delay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.addTargetArrayToSequenceBtn);
@@ -526,37 +570,39 @@
         private System.Windows.Forms.Button t2_s_btn;
         private System.Windows.Forms.Button t2_ns_btn;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button t3_s_btn;
+        private System.Windows.Forms.Button t3_ns_btn;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button t4_s_btn;
+        private System.Windows.Forms.Button t4_ns_btn;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button t5_s_btn;
+        private System.Windows.Forms.Button t5_ns_btn;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button t6_s_btn;
+        private System.Windows.Forms.Button t6_ns_btn;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button t7_s_btn;
+        private System.Windows.Forms.Button t7_ns_btn;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button t8_s_btn;
+        private System.Windows.Forms.Button t8_ns_btn;
         private System.Windows.Forms.TextBox t1_txt;
         private System.Windows.Forms.TextBox t2_txt;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox t3_txt;
+        private System.Windows.Forms.TextBox t4_txt;
+        private System.Windows.Forms.TextBox t5_txt;
+        private System.Windows.Forms.TextBox t6_txt;
+        private System.Windows.Forms.TextBox t7_txt;
+        private System.Windows.Forms.TextBox t8_txt;
         private System.Windows.Forms.Button addTargetArrayToSequenceBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox delay;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addDelayToSequenceBtn;
+        private System.Windows.Forms.Button runSequence;
+        private System.Windows.Forms.Button clearSequence;
     }
 }
 
