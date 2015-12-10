@@ -68,6 +68,8 @@
             this.addDelayToSequenceBtn = new System.Windows.Forms.Button();
             this.runSequence = new System.Windows.Forms.Button();
             this.clearSequence = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.serialPort = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -463,7 +465,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(778, 138);
+            this.label1.Location = new System.Drawing.Point(777, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 7;
@@ -471,16 +473,16 @@
             // 
             // delay
             // 
-            this.delay.Location = new System.Drawing.Point(777, 154);
+            this.delay.Location = new System.Drawing.Point(817, 135);
             this.delay.Name = "delay";
-            this.delay.Size = new System.Drawing.Size(122, 20);
+            this.delay.Size = new System.Drawing.Size(82, 20);
             this.delay.TabIndex = 8;
             this.delay.Text = "1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(905, 158);
+            this.label2.Location = new System.Drawing.Point(905, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 9;
@@ -488,7 +490,7 @@
             // 
             // addDelayToSequenceBtn
             // 
-            this.addDelayToSequenceBtn.Location = new System.Drawing.Point(777, 181);
+            this.addDelayToSequenceBtn.Location = new System.Drawing.Point(777, 162);
             this.addDelayToSequenceBtn.Name = "addDelayToSequenceBtn";
             this.addDelayToSequenceBtn.Size = new System.Drawing.Size(157, 23);
             this.addDelayToSequenceBtn.TabIndex = 10;
@@ -516,11 +518,30 @@
             this.clearSequence.UseVisualStyleBackColor = true;
             this.clearSequence.Click += new System.EventHandler(this.clearSequence_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(777, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Port";
+            // 
+            // serialPort
+            // 
+            this.serialPort.Location = new System.Drawing.Point(817, 232);
+            this.serialPort.Name = "serialPort";
+            this.serialPort.Size = new System.Drawing.Size(82, 20);
+            this.serialPort.TabIndex = 14;
+            this.serialPort.Text = "COM1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(941, 322);
+            this.Controls.Add(this.serialPort);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.clearSequence);
             this.Controls.Add(this.runSequence);
             this.Controls.Add(this.addDelayToSequenceBtn);
@@ -603,6 +624,8 @@
         private System.Windows.Forms.Button addDelayToSequenceBtn;
         private System.Windows.Forms.Button runSequence;
         private System.Windows.Forms.Button clearSequence;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox serialPort;
     }
 }
 
