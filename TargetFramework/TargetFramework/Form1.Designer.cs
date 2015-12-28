@@ -534,6 +534,8 @@
             this.serialPort.Size = new System.Drawing.Size(82, 20);
             this.serialPort.TabIndex = 14;
             this.serialPort.Text = "COM1";
+            this.serialPort.TextChanged += new System.EventHandler(this.serialPort_TextChanged);
+            this.serialPort.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.serialPort_MouseDoubleClick);
             // 
             // Form1
             // 

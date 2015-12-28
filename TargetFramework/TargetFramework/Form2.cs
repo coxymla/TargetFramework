@@ -12,17 +12,33 @@ using System.Windows.Forms;
 
 namespace TargetFramework
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         BindingList<SequenceItem> _sequence = new BindingList<SequenceItem>();
-        private TextBox[] _targets;
+        private ThreeWayTarget[] _targets;
         private SerialPort _serialPort = null;
-         
-        public Form1()
+            
+        public Form2()
         {
             InitializeComponent();
             dataGridView1.DataSource = _sequence;
-            _targets = new[] {t1_txt, t2_txt, t3_txt, t4_txt, t5_txt, t6_txt, t7_txt, t8_txt,};
+
+            _targets = new[]
+            {
+                T1,
+                T2,
+                T3,
+                T4,
+                T5,
+                T6,
+                T7,
+                T8,
+            };
+
+            foreach (var target in _targets)
+            {
+                target.TargetName = target.Name;
+            }
         }
 
         private void addTargetArrayToSequenceBtn_Click(object sender, EventArgs e)
@@ -36,6 +52,11 @@ namespace TargetFramework
             _sequence.Add(new SequenceItem() { Type = SequenceItemType.Array, Description = GetCurrentTargetArray(), Relays = GetCurrentRelays() });
         }
 
+        private string GetCurrentTargetArray()
+        {
+            return $"Display Target Array: T1:{T1.CurrentState}, T2:{T2.CurrentState}, T3:{T3.CurrentState}, T4:{T4.CurrentState}, T5:{T5.CurrentState}, T6:{T6.CurrentState}, T7:{T7.CurrentState}, T8:{T8.CurrentState}";
+        }
+
         private bool[] GetCurrentRelays()
         {
             var relays = new bool[16];
@@ -43,29 +64,30 @@ namespace TargetFramework
             for (var i = 0; i < _targets.Length; i++)
             {
                 var target = _targets[i];
-                SetTargetRelays(relays, target, i*2);
+                SetTargetRelays(relays, target, i * 2);
             }
 
             return relays;
         }
 
-        private void SetTargetRelays(bool[] relays, TextBox target, int index)
+        private void SetTargetRelays(bool[] relays, ThreeWayTarget target, int index)
         {
-            if (target.Text == "S")
+            switch (target.CurrentState)
             {
-                relays[index + 0] = true;
-                relays[index + 1] = false;
-            }
-            else
-            {
-                relays[index + 0] = false;
-                relays[index + 1] = true;
-            }
-        }
+                case "Shoot":
+                    relays[index + 0] = true;
+                    relays[index + 1] = false;
+                    break;
+                case "No Shoot":
+                    relays[index + 0] = false;
+                    relays[index + 1] = true;
+                    break;
+                case "Edge-On":
+                    relays[index + 0] = false;
+                    relays[index + 1] = false;
+                    break;
 
-        private string GetCurrentTargetArray()
-        {
-            return $"Display Target Array: T1:{t1_txt.Text}, T2:{t2_txt.Text}, T3:{t3_txt.Text}, T4:{t4_txt.Text}, T5:{t5_txt.Text}, T6:{t6_txt.Text}, T7:{t7_txt.Text}, T8:{t8_txt.Text}";
+            }
         }
 
         private void addDelayToSequenceBtn_Click(object sender, EventArgs e)
@@ -84,102 +106,6 @@ namespace TargetFramework
             throw new ApplicationException("Delay must be an integer.");
         }
 
-        private void ChangeTarget(Button buttonToEnable, Button buttonToDisable, TextBox textBoxToUpdate, string text)
-        {
-            buttonToEnable.Enabled = true;
-            buttonToDisable.Enabled = false;
-            textBoxToUpdate.Text = text;
-
-            if (text == "S")
-            {
-                textBoxToUpdate.BackColor = System.Drawing.SystemColors.Control;
-            }
-            else
-            {
-                textBoxToUpdate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            }
-        }
-
-        private void t1_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t1_ns_btn, t1_s_btn, t1_txt, "S");
-        }
-
-        private void t1_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t1_s_btn, t1_ns_btn, t1_txt, "NS");
-        }
-
-        private void t2_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t2_ns_btn, t2_s_btn, t2_txt, "S");
-        }
-
-        private void t2_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t2_s_btn, t2_ns_btn, t2_txt, "NS");
-        }
-
-        private void t3_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t3_ns_btn, t3_s_btn, t3_txt, "S");
-        }
-
-        private void t3_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t3_s_btn, t3_ns_btn, t3_txt, "NS");
-        }
-
-        private void t4_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t4_ns_btn, t4_s_btn, t4_txt, "S");
-        }
-
-        private void t4_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t4_s_btn, t4_ns_btn, t4_txt, "NS");
-        }
-
-        private void t5_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t5_ns_btn, t5_s_btn, t5_txt, "S");
-        }
-
-        private void t5_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t5_s_btn, t5_ns_btn, t5_txt, "NS");
-        }
-
-        private void t6_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t6_ns_btn, t6_s_btn, t6_txt, "S");
-        }
-
-        private void t6_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t6_s_btn, t6_ns_btn, t6_txt, "NS");
-        }
-
-        private void t7_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t7_ns_btn, t7_s_btn, t7_txt, "S");
-        }
-
-        private void t7_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t7_s_btn, t7_ns_btn, t7_txt, "NS");
-        }
-
-        private void t8_s_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t8_ns_btn, t8_s_btn, t8_txt, "S");
-        }
-
-        private void t8_ns_btn_Click(object sender, EventArgs e)
-        {
-            ChangeTarget(t8_s_btn, t8_ns_btn, t8_txt, "NS");
-        }
-
         private void clearSequence_Click(object sender, EventArgs e)
         {
             _sequence.Clear();
@@ -189,15 +115,15 @@ namespace TargetFramework
         {
             try
             {
-                if (_serialPort == null)
-                {
-                    _serialPort = new SerialPort(serialPort.Text, 9600, Parity.None, 8, StopBits.One);
-                }
+                //if (_serialPort == null)
+                //{
+                //    _serialPort = new SerialPort(serialPort.Text, 9600, Parity.None, 8, StopBits.One);
+                //}
 
-                if (!_serialPort.IsOpen)
-                {
-                    _serialPort.Open();
-                }
+                //if (!_serialPort.IsOpen)
+                //{
+                //    _serialPort.Open();
+                //}
 
                 var bytes = new byte[5];
                 bytes[0] = BitConverter.GetBytes('x')[0];
@@ -246,7 +172,7 @@ namespace TargetFramework
                             relays = relays | Relays.Relay8;
                         }
 
-                        bytes[1] = (byte) relays;
+                        bytes[1] = (byte)relays;
 
                         relays = Relays.None;
                         if (sequenceItem.Relays[8])
@@ -282,13 +208,13 @@ namespace TargetFramework
                             relays = relays | Relays.Relay8;
                         }
 
-                        bytes[2] = (byte) relays;
+                        bytes[2] = (byte)relays;
 
-                        _serialPort.Write(bytes, 0, 5);
+                        //_serialPort.Write(bytes, 0, 5);
                     }
                 }
 
-                _serialPort.Close();
+                //_serialPort.Close();
             }
             finally
             {
@@ -298,16 +224,6 @@ namespace TargetFramework
                     _serialPort = null;
                 }
             }
-        }
-
-        private void serialPort_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void serialPort_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            var foo = SerialPort.GetPortNames();
         }
     }
 }
