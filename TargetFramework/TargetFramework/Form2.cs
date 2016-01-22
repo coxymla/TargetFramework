@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace TargetFramework
 {
@@ -93,6 +95,7 @@ namespace TargetFramework
         private void addDelayToSequenceBtn_Click(object sender, EventArgs e)
         {
             _sequence.Add(new SequenceItem() { Type = SequenceItemType.Delay, Description = $"Delay: {delay.Text} second(s)", Delay = GetDelay() });
+            //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private int GetDelay()
@@ -222,6 +225,43 @@ namespace TargetFramework
                 {
                     _serialPort.Dispose();
                     _serialPort = null;
+                }
+            }
+        }
+
+        private void saveSeq_Click(object sender, EventArgs e)
+        {
+            var dialog = new SaveFileDialog();
+            dialog.AddExtension = true;
+            dialog.DefaultExt = "sequence";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                var serializer = new XmlSerializer(typeof(List<SequenceItem>));
+                var saveList = new List<SequenceItem>(_sequence);
+                using (TextWriter tw = new StreamWriter(dialog.FileName))
+                {
+                    serializer.Serialize(tw, saveList);
+                }
+            }
+        }
+
+        private void loadSeq_Click(object sender, EventArgs e)
+        {
+            var dialog = new OpenFileDialog();
+            dialog.DefaultExt = "sequence";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                var deserializer = new XmlSerializer(typeof(List<SequenceItem>));
+                using (TextReader tr = new StreamReader(dialog.FileName))
+                {
+                    var obj = deserializer.Deserialize(tr);
+                    var list = obj as List<SequenceItem>;
+                    _sequence.Clear();
+
+                    foreach (var sequenceItem in list)
+                    {
+                        _sequence.Add(sequenceItem);
+                    }
                 }
             }
         }
